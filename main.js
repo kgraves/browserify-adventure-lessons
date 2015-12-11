@@ -1,4 +1,6 @@
-var ndjson = require('./ndjson');
+var url = require('url');
+var qs = require('querystring');
 
-console.log(ndjson.parse(prompt()));
-console.log(ndjson.stringify(prompt()));
+var addr = prompt();
+var query = qs.parse(url.parse(addr).query);
+console.log(url.resolve(addr, query.file));
