@@ -1,6 +1,6 @@
-var uniq = require('uniq');
+var uniquely = require('./uniquely');
 
-var input = prompt('').split(',');
-var uniques = uniq(input);
+var input = prompt('');
+var uniques = uniquely(input);
 
 console.log(uniques);
