@@ -1,6 +1,4 @@
-var uniquely = require('./uniquely');
+var ndjson = require('./ndjson');
 
-var input = prompt('');
-var uniques = uniquely(input);
-
-console.log(uniques);
+console.log(ndjson.parse(prompt()));
+console.log(ndjson.stringify(prompt()));
